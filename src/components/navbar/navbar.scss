@@ -117,26 +117,42 @@
       align-items: center;
       gap: 1rem;
 
-      button {
+      .supportBtn {
         border: none;
         height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
         padding: 0 1rem;
-
         border-radius: 0.5rem;
-        color: var(--light-25);
-        font-size: 1rem;
         background-color: var(--primary-1000);
         cursor: pointer;
 
         @include mixins.semiLargeDesktop {
           height: 2.5rem;
-          font-size: 1rem;
         }
 
         @include mixins.extraLargeTablet {
           height: 2rem;
-          font-size: 0.9rem;
           padding: 0 0.8rem;
+        }
+
+        span {
+          font-family: Bornomala, sans-serif;
+          font-size: 1rem;
+          color: var(--light-25);
+
+          @include mixins.semiLargeDesktop {
+            height: 2.5rem;
+            font-size: 1rem;
+          }
+
+          @include mixins.extraLargeTablet {
+            height: 2rem;
+            font-size: 0.9rem;
+            padding: 0 0.8rem;
+          }
         }
       }
 

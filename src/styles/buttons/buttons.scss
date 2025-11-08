@@ -1,0 +1,31 @@
+@use "../foundations/mixins.scss";
+
+.primaryBtn {
+  border: none;
+  outline: none;
+  padding: 0.3rem 1rem;
+  border-radius: 0.5rem;
+  color: var(--light-25);
+  font-size: 1rem;
+  background-color: var(--primary-1000);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--primary-800);
+    transition: all 0.3s ease-in-out;
+  }
+
+  @include mixins.extraLargeTablet {
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+
+  span {
+    font-family: Bornomala, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--dark-1000);
+  }
+}

@@ -10,6 +10,7 @@ import AboutPage from "../pages/aboutPage/AboutPage.jsx";
 import NewsPage from "../pages/newsPage/NewsPage.jsx";
 import GalleryPage from "../pages/galleryPage/GalleryPage.jsx";
 import ContactPage from "../pages/contactPage/ContactPage.jsx";
+import SupportPage from "../pages/supportPage/SupportPage.jsx";
 import ErrorPage from "../pages/errorPage/ErrorPage.jsx";
 
 const ScrollToTop = () => {
@@ -48,6 +49,10 @@ const AppRoutes = () => {
             {
               path: "/contact",
               element: <ContactPage />,
+            },
+            {
+              path: "/support",
+              element: <SupportPage />,
             },
           ],
         },

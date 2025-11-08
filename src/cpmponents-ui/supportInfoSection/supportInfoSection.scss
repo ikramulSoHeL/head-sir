@@ -72,7 +72,7 @@
           }
         }
 
-        button {
+        .pb {
           border: none;
           outline: none;
 
@@ -84,6 +84,7 @@
           gap: 1rem;
           padding: 0 3rem;
           border-radius: 0.5rem;
+          text-decoration: none;
           background-color: #1a1f3c;
 
           cursor: pointer;
@@ -126,7 +127,7 @@
           justify-content: flex-end;
         }
 
-        button {
+        .pb {
           border: none;
           height: 5rem;
           width: 17rem;
@@ -135,7 +136,7 @@
           justify-content: center;
           border-radius: 0.5rem;
           background-color: #018f39;
-
+          text-decoration: none;
           cursor: pointer;
 
           @include mixins.extraLargeTablet {

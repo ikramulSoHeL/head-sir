@@ -29,7 +29,7 @@ export const footerData = {
         },
         {
           name: "সাপোর্ট করুন ",
-          link: "/",
+          link: "/support",
         },
       ],
     },

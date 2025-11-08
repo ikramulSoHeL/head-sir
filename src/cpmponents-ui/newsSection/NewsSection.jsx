@@ -3,6 +3,7 @@ import "./newsSection.scss";
 
 // components
 import NewsCard from "../../components/cards/newsCard/NewsCard";
+import { Link } from "react-router-dom";
 
 const NewsSection = () => {
   return (
@@ -27,7 +28,9 @@ const NewsSection = () => {
           </div>
 
           <div className="button_container">
-            <button>সকল সংবাদ/কার্যক্রম </button>
+            <Link to="/news" className="button">
+              <span>সকল সংবাদ/কার্যক্রম</span>
+            </Link>
           </div>
         </div>
       </div>

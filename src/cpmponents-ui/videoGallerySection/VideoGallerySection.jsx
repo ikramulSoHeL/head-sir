@@ -6,6 +6,7 @@ import "./videoGallerySection.scss";
 import arrowLeft from "../../assets/icons/ArrowLeft.svg";
 import arrowRight from "../../assets/icons/ArrowRight.svg";
 import VideoCard from "../../components/cards/videoCard/VideoCard";
+import { Link } from "react-router-dom";
 
 const VideoGallerySection = () => {
   return (
@@ -39,7 +40,9 @@ const VideoGallerySection = () => {
         </div>
 
         <div className="button_container">
-          <button>সকল ভিডিও </button>
+          <Link to="/gallery" className="button">
+            <span>সকল ভিডিও</span>
+          </Link>
         </div>
       </div>
     </div>

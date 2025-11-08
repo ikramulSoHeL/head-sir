@@ -1,9 +1,9 @@
 import React from "react";
 import "./supportInfoSection.scss";
+import { Link } from "react-router-dom";
 
 // assets
 import supportInfoVector from "../../assets/icons/support-vector.svg";
-import arrowRight from "../../assets/icons/ArrowRight.svg";
 
 const SupportInfoSection = ({ contentPadding }) => {
   return (
@@ -21,19 +21,19 @@ const SupportInfoSection = ({ contentPadding }) => {
               বিষয়গুলোর উপর সহজে জ্ঞানার্জন সম্ভব হয়।
             </span>
 
-            <button>
+            <Link to="/contact" className="pb">
               <span>যোগাযোগ করুন</span>
-              <img src={arrowRight} alt="" />
-            </button>
+            </Link>
           </div>
 
           <div className="right">
-            <button>
+            <Link to="/" className="pb">
               <span>স্বেচ্ছাসেবক হোন</span>
-            </button>
-            <button>
+            </Link>
+
+            <Link to="/support" className="pb">
               <span>সাপোর্ট করুন</span>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

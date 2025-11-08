@@ -39,7 +39,9 @@ const Navbar = () => {
         </div>
 
         <div className="navbar_right">
-          <button>সাপোর্ট করুন</button>
+          <Link to="/support" className="supportBtn">
+            <span>সাপোর্ট করুন</span>
+          </Link>
 
           <div className="mobile_menuContainer">
             <div className="mobile_menuBtn" onClick={handleMobileMenuToggle}>
