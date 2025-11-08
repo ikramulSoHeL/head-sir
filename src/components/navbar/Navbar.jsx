@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 
 // data
 import { navbarData } from "../../assets/data/navbarData";
+import pImg from "../../assets/images/mah.png";
 
 const Navbar = () => {
   const handleMobileMenuToggle = () => {
@@ -23,10 +24,7 @@ const Navbar = () => {
       <div className="navbar_container">
         <Link to="/" className="logo_section">
           <div className="image">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXp3DxP80ArpRzsB0XWBG9Ow5GeuefbLrUHw&s"
-              alt=""
-            />
+            <img src={pImg} alt="" />
           </div>
 
           <span>মাহবুবুল আলম</span>
