@@ -103,13 +103,14 @@
 
           width: max-content;
           height: 3.5rem;
+
+          display: flex;
+          align-items: center;
+          gap: 1rem;
           background-color: var(--secondary-1000);
           border-radius: 0.5rem;
-          padding: 0 4rem;
-          font-family: Bornomala, sans-serif;
-          font-size: 1.5rem;
-          font-weight: 600;
-          color: var(--gray-1000);
+          padding: 0 3rem;
+
           cursor: pointer;
           transition: all 0.3s ease-in-out;
 
@@ -121,6 +122,18 @@
           @include mixins.extraLargeTablet {
             height: 2.5rem;
             font-size: 1rem;
+          }
+
+          span {
+            font-family: Bornomala, sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--dark-1000);
+          }
+
+          img {
+            height: 1.5rem;
+            width: 1.5rem;
           }
         }
       }

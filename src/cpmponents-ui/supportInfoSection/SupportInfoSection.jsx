@@ -3,6 +3,7 @@ import "./supportInfoSection.scss";
 
 // assets
 import supportInfoVector from "../../assets/icons/support-vector.svg";
+import arrowRight from "../../assets/icons/ArrowRight.svg";
 
 const SupportInfoSection = ({ contentPadding }) => {
   return (
@@ -17,15 +18,22 @@ const SupportInfoSection = ({ contentPadding }) => {
             <span>
               বিষয়ভিত্তিক হাদীস হচ্ছে হাদীসের এমন সংকলন যা বর্ণনাকারী বা সনদ
               দ্বারা নয় বরং বিষয় অনুসারে সজ্জিত। এর মাধ্যমে ইসলামের নির্দিষ্ট
-              বিষয়গুলোর উপর সহজে জ্ঞানার্জন সম্ভব হয়।{" "}
+              বিষয়গুলোর উপর সহজে জ্ঞানার্জন সম্ভব হয়।
             </span>
 
-            <button>যোগাযোগ করুন</button>
+            <button>
+              <span>যোগাযোগ করুন</span>
+              <img src={arrowRight} alt="" />
+            </button>
           </div>
 
           <div className="right">
-            <button>স্বেচ্ছাসেবক হোন </button>
-            <button>সাপোর্ট করুন</button>
+            <button>
+              <span>স্বেচ্ছাসেবক হোন</span>
+            </button>
+            <button>
+              <span>সাপোর্ট করুন</span>
+            </button>
           </div>
         </div>
       </div>

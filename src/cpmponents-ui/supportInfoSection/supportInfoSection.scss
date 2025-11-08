@@ -74,20 +74,43 @@
 
         button {
           border: none;
-          height: 3rem;
-          width: 15rem;
+          outline: none;
+
+          width: max-content;
+          height: 3.5rem;
+
           display: flex;
           align-items: center;
-          justify-content: center;
+          gap: 1rem;
+          padding: 0 3rem;
           border-radius: 0.5rem;
           background-color: #1a1f3c;
 
-          font-family: Bornomala, sans-serif;
-          font-size: 1rem;
-          color: var(--light-25);
           cursor: pointer;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            background-color: #1a1f3c;
+            transition: all 0.3s ease-in-out;
+          }
 
           @include mixins.extraLargeTablet {
+            height: 2.5rem;
+            font-size: 1rem;
+          }
+
+          span {
+            white-space: nowrap;
+            font-family: Bornomala, sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--light-100);
+          }
+
+          img {
+            height: 1.5rem;
+            width: 1.5rem;
+            object-fit: cover;
           }
         }
       }
@@ -113,16 +136,18 @@
           border-radius: 0.5rem;
           background-color: #018f39;
 
-          font-family: Bornomala, sans-serif;
-          font-size: 1.5rem;
-          color: var(--light-25);
-          text-align: center;
-
           cursor: pointer;
 
           @include mixins.extraLargeTablet {
             height: 4rem;
             width: 100%;
+          }
+
+          span {
+            font-family: Bornomala, sans-serif;
+            font-size: 1.5rem;
+            color: var(--light-25);
+            text-align: center;
           }
         }
       }

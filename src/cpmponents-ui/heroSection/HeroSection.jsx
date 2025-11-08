@@ -4,6 +4,7 @@ import "./heroSection.scss";
 // assets
 import BannerImage from "../../assets/images/heroSection/banner.png";
 import LayerImage from "../../assets/images/heroSection/layer.png";
+import arrowRight from "../../assets/icons/ArrowRight.svg";
 
 const HeroSection = () => {
   return (
@@ -26,7 +27,10 @@ const HeroSection = () => {
               প্রত্যেক মানুষ মর্যাদা ও সুযোগের সমান অধিকার ভোগ করবে।
             </span>
 
-            <button>সাপোর্ট করুন</button>
+            <button>
+              <span>সাপোর্ট করুন</span>
+              <img src={arrowRight} alt="" />
+            </button>
           </div>
         </div>
       </div>
