@@ -5,7 +5,7 @@ import "./styles/global.scss";
 
 // React Router
 import { BrowserRouter } from "react-router-dom";
-import AppRoutes from "./routes/AppROutes.jsx";
+import AppRoutes from "./routes/AppRoutes";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
