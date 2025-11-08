@@ -1,0 +1,129 @@
+@use "../../styles/foundations/mixins.scss";
+
+.heroSection {
+  height: 51.25rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include mixins.semiLargeDesktop {
+    height: 40rem;
+  }
+
+  @include mixins.extraLargeTablet {
+    height: 35rem;
+  }
+
+  .banner_bg {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: fill;
+
+      @include mixins.semiLargeDesktop {
+        object-fit: fill;
+      }
+    }
+
+    .layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      opacity: 0.9;
+      z-index: 1;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .banner_contentContainer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 4rem;
+
+      .banner_content {
+        width: 84.5rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0 1rem;
+        z-index: 10;
+
+        h2 {
+          max-width: 43.5rem;
+          font-family: Bornomala, sans-serif;
+          font-size: 4rem;
+          font-weight: 600;
+          color: var(--light-25);
+          line-height: 1.5;
+          opacity: 1;
+
+          @include mixins.extraLargeTablet {
+            font-size: 2rem;
+            line-height: 1.5;
+          }
+        }
+
+        span {
+          max-width: 43.5rem;
+          font-family: Bornomala, sans-serif;
+          font-size: 1.5rem;
+          color: var(--light-25);
+          line-height: 1.5;
+
+          @include mixins.extraLargeTablet {
+            font-size: 1rem;
+            line-height: 1.5;
+          }
+        }
+
+        button {
+          border: none;
+          outline: none;
+
+          width: max-content;
+          height: 3.5rem;
+          background-color: var(--secondary-1000);
+          border-radius: 0.5rem;
+          padding: 0 4rem;
+          font-family: Bornomala, sans-serif;
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: var(--gray-1000);
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            background-color: var(--secondary-800);
+            transition: all 0.3s ease-in-out;
+          }
+
+          @include mixins.extraLargeTablet {
+            height: 2.5rem;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

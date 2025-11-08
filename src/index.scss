@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Bornomala";
+  src: url("./assets/fonts/Bornomala-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: bold;
+}
+@font-face {
+  font-family: "Bornomala";
+  src: url("./assets/fonts/Bornomala-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #1a1f3c;
+  background-color: #fff;
+
+  // COLORS
+
+  // ------- PRIMARY -------
+  --primary-1000: #2b9e76;
+  --primary-800: #71bea3;
+  --primary-200: #9dd2c0;
+  --primary-50: #effaf6;
+
+  // ------- SECONDARY -------
+  --secondary-1000: #f3db62;
+  --secondary-800: #f7e796;
+  --secondary-200: #f9eeb7;
+  --secondary-50: #fefbef;
+
+  // ------- DARK -------
+  --dark-1000: #1a1f3c;
+  --dark-700: #595f7a;
+  --dark-500: #8c92af;
+
+  // ------- LIGHT -------
+  --light-100: #e5e7f0;
+  --light-50: #f5f6fa;
+  --light-25: #f5f6fa;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

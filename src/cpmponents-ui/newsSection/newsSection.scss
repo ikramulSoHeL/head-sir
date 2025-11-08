@@ -1,0 +1,73 @@
+@use "../../styles//foundations/mixins.scss";
+
+.newsSection {
+  background-color: #f8f9fa;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .headerSection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      h2 {
+        font-family: Bornomala, sans-serif;
+        font-size: 2.5rem;
+
+        @include mixins.portraitTablet {
+          font-size: 1.8rem;
+        }
+      }
+
+      span {
+        width: 80%;
+        font-family: Bornomala, sans-serif;
+        font-size: 1.5rem;
+        text-align: center;
+
+        @include mixins.portraitTablet {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .news_section {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      .news_cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+        gap: 2rem;
+      }
+
+      .button_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button {
+          border: none;
+          width: max-content;
+          height: 3rem;
+
+          font-family: Bornomala, sans-serif;
+          font-size: 1.5rem;
+          text-align: center;
+          padding: 0 2rem;
+
+          border-radius: 0.5rem;
+          background-color: var(--primary-1000);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@use "../../styles/foundations/mixins.scss";
+
+.galleryPage {
+  min-height: calc(100vh - 5rem);
+
+  .gallery_conteiner {
+    background-color: #f8f9fa;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        h1 {
+          font-family: Bornomala, sans-serif;
+          font-size: 2.5rem;
+          font-weight: 600;
+          color: var(--dark-1000);
+
+          @include mixins.extraLargeTablet {
+            font-size: 2rem;
+            text-align: center;
+          }
+        }
+
+        span {
+          width: 80%;
+          font-family: Bornomala, sans-serif;
+          font-size: 1.5rem;
+          text-align: center;
+          color: var(--dark-700);
+
+          @include mixins.extraLargeTablet {
+            width: 95%;
+            font-size: 1rem;
+            text-align: center;
+          }
+        }
+      }
+
+      .gallery_list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20.5rem, 1fr));
+        gap: 1.5rem;
+      }
+    }
+  }
+}

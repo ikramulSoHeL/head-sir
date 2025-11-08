@@ -1,0 +1,146 @@
+@use "../../styles//foundations/mixins.scss";
+
+.leadershipIntro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .first {
+    background-color: #ffffff;
+  }
+  .second {
+    background-color: #f3f3f3;
+  }
+  .content {
+    .content_layout {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 0.65fr 1fr;
+      align-items: center;
+      gap: 4rem;
+
+      &.reverse {
+        grid-template-columns: 1fr 0.65fr;
+
+        @include mixins.extraLargeTablet {
+          grid-template-columns: 1fr;
+          direction: ltr;
+        }
+      }
+
+      @include mixins.extraLargeTablet {
+        direction: ltr;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .left_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+
+        img {
+          // height: 3.7rem;
+          height: 4rem;
+          width: fit-content;
+
+          @include mixins.extraLargeTablet {
+            height: 3rem;
+            width: fit-content;
+          }
+        }
+
+        h2 {
+          font-family: Bornomala, sans-serif;
+          font-size: 2.3rem;
+
+          @include mixins.portraitTablet {
+            font-size: 1.8rem;
+          }
+        }
+
+        span {
+          font-family: Bornomala, sans-serif;
+          font-size: 1.2rem;
+          color: var(--dark-700);
+
+          @include mixins.portraitTablet {
+            font-size: 1.1rem;
+          }
+        }
+
+        .span_2 {
+          font-family: Bornomala, sans-serif;
+          font-size: 1.2rem;
+          color: var(--dark-700);
+
+          @include mixins.portraitTablet {
+            font-size: 1.1rem;
+          }
+        }
+
+        .socials {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          .social {
+            height: 2rem;
+            width: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0.5rem;
+            border-radius: 50%;
+            border: 1px solid var(--primary-1000);
+            background-color: transparent;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+              background-color: var(--primary-1000);
+              color: var(--light-100);
+              transition: all 0.3s ease-in-out;
+
+              svg {
+                fill: var(--light-100);
+                transition: all 0.3s ease-in-out;
+              }
+            }
+
+            svg {
+              font-size: 1rem;
+              fill: var(--primary-1000);
+              transition: all 0.3s ease-in-out;
+
+              @include mixins.portraitTablet {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+
+      .right_content {
+        .video {
+          height: 27.75rem;
+          border-radius: 2rem;
+
+          @include mixins.portraitTablet {
+            height: 14rem;
+          }
+
+          img {
+            height: 100%;
+            width: 100%;
+            border-radius: 2rem;
+
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}

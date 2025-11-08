@@ -1,0 +1,106 @@
+@use "../../styles/foundations/mixins.scss";
+
+.contactPage {
+  .contact_container {
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      span {
+        font-family: Bornomala, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--primary-1000);
+
+        @include mixins.extraLargeTablet {
+          font-size: 1rem;
+        }
+      }
+
+      h2 {
+        width: 50%;
+        font-family: Bornomala, sans-serif;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: var(--dark-1000);
+        text-align: center;
+
+        @include mixins.extraLargeTablet {
+          font-size: 2rem;
+        }
+
+        @include mixins.portraitTablet {
+          width: 95%;
+          font-size: 2rem;
+        }
+      }
+
+      p {
+        width: 80%;
+        font-family: Bornomala, sans-serif;
+        font-size: 1.5rem;
+        color: var(--dark-700);
+        text-align: center;
+
+        @include mixins.extraLargeTablet {
+          width: 95%;
+          font-size: 1rem;
+          text-align: center;
+        }
+
+        @include mixins.portraitTablet {
+          width: 100%;
+        }
+      }
+
+      .socials {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        .social {
+          height: 3rem;
+          width: 3rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 1rem;
+          border-radius: 50%;
+          border: 1px solid var(--primary-1000);
+          background-color: transparent;
+          transition: all 0.3s ease-in-out;
+          cursor: pointer;
+
+          &:hover {
+            background-color: var(--primary-1000);
+            color: var(--light-100);
+            transition: all 0.3s ease-in-out;
+
+            svg {
+              fill: var(--light-100);
+              transition: all 0.3s ease-in-out;
+            }
+          }
+
+          @include mixins.portraitTablet {
+            height: 2rem;
+            width: 2rem;
+          }
+
+          svg {
+            font-size: 1.5rem;
+            fill: var(--primary-1000);
+            transition: all 0.3s ease-in-out;
+
+            @include mixins.portraitTablet {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

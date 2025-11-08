@@ -1,0 +1,11 @@
+@use "../../styles/foundations/mixins.scss";
+
+.app_layout {
+  display: flex;
+  flex-direction: column;
+
+  .app_main {
+    min-height: calc(100vh - 5rem);
+    margin-top: 5rem;
+  }
+}

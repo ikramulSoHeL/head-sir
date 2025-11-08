@@ -1,0 +1,44 @@
+@use "../../../styles//foundations/mixins.scss";
+
+.news_card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  cursor: pointer;
+
+  .newsImg {
+    width: 100%;
+    height: 11.8rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0.6rem;
+    }
+  }
+
+  .newsContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-bottom: 0.3rem;
+
+    h3 {
+      font-family: Bornomala, sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--dark-1000);
+    }
+
+    p {
+      font-family: Bornomala, sans-serif;
+      font-size: 1.2rem;
+      color: var(--dark-500);
+    }
+  }
+}

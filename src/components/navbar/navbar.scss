@@ -1,0 +1,248 @@
+@use "../../styles/foundations/mixins.scss";
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  height: 5rem;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  z-index: 1000;
+
+  @include mixins.extraLargeTablet {
+    padding: 0 1rem;
+  }
+
+  .navbar_container {
+    width: 100%;
+    height: 100%;
+    max-width: 82.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo_section {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+
+      .image {
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+
+        @include mixins.extraLargeTablet {
+          height: 2.5rem;
+          width: 2.5rem;
+        }
+
+        img {
+          height: 100%;
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      span {
+        font-family: Bonomala, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--dark-1000);
+
+        @include mixins.portraitTablet {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .navbar_center {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      @include mixins.semiLargeDesktop {
+        display: none;
+      }
+
+      .menu_item {
+        padding: 0.3rem 0.8rem;
+        text-decoration: none;
+        border-radius: 2rem;
+        background-color: transparent;
+        transition: all 0.3s ease-in-out;
+
+        &.active {
+          color: var(--light-25);
+          background-color: var(--primary-1000);
+          transition: all 0.3s ease-in-out;
+
+          span {
+            color: var(--light-25);
+          }
+        }
+
+        &:hover {
+          color: var(--light-25);
+          background-color: var(--primary-1000);
+          transition: all 0.3s ease-in-out;
+
+          span {
+            color: var(--light-25);
+          }
+        }
+
+        span {
+          font-family: Bornomala, sans-serif;
+          font-size: 1rem;
+          font-weight: 400;
+          color: var(--dark-1000);
+          cursor: pointer;
+        }
+      }
+    }
+
+    .navbar_right {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      button {
+        border: none;
+        height: 3rem;
+        padding: 0 1rem;
+
+        border-radius: 0.5rem;
+        color: var(--light-25);
+        font-size: 1rem;
+        background-color: var(--primary-1000);
+        cursor: pointer;
+
+        @include mixins.semiLargeDesktop {
+          height: 2.5rem;
+          font-size: 1rem;
+        }
+
+        @include mixins.extraLargeTablet {
+          height: 2rem;
+          font-size: 0.7rem;
+          padding: 0 0.8rem;
+        }
+      }
+
+      .mobile_menuContainer {
+        display: none;
+        height: 100%;
+
+        @include mixins.semiLargeDesktop {
+          position: relative;
+          display: flex;
+          align-items: center;
+        }
+
+        .mobile_menuBtn {
+          height: 1.5rem;
+          width: 2rem;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          justify-content: space-between;
+
+          cursor: pointer;
+
+          .line_1 {
+            width: 60%;
+            height: 0.2rem;
+            border-radius: 0.5rem;
+            background: var(--dark-700);
+            transition: all 0.3s ease-in-out;
+
+            &.active {
+              width: 100%;
+              transform: rotate(-45deg) translateY(0.5rem) translateX(-0.45rem);
+              transition: all 0.3s ease-in-out;
+            }
+          }
+
+          .line_2 {
+            width: 100%;
+            height: 0.2rem;
+            border-radius: 0.5rem;
+            background: var(--dark-700);
+            transition: all 0.3s ease-in-out;
+
+            &.active {
+              width: 0;
+              transition: all 0.3s ease-in-out;
+            }
+          }
+
+          .line_3 {
+            width: 75%;
+            height: 0.2rem;
+            border-radius: 0.5rem;
+            background: var(--dark-700);
+            transition: all 0.3s ease-in-out;
+
+            &.active {
+              width: 100%;
+              transform: rotate(45deg) translateY(-0.5rem) translateX(-0.4rem);
+              transition: all 0.3s ease-in-out;
+            }
+          }
+        }
+
+        .mobile_menu {
+          display: none;
+          transition: all 0.3s ease-in-out;
+
+          &.active {
+            position: absolute;
+            top: 100%;
+            right: 0;
+
+            width: max-content;
+            display: flex;
+            flex-direction: column;
+
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: var(--light-25);
+            transition: all 0.5s ease-in-out;
+          }
+
+          .mobile_menuItem {
+            padding: 0.5rem 2.5rem 0.5rem 1rem;
+            border-bottom: 1px solid var(--light-100);
+            text-decoration: none;
+            cursor: pointer;
+
+            &.active {
+              border-bottom: 1px solid var(--primary-1000);
+
+              span {
+                color: var(--primary-1000);
+              }
+            }
+
+            span {
+              font-family: Bornomala, sans-serif;
+              font-size: 1rem;
+              font-weight: 600;
+              color: var(--dark-1000);
+            }
+          }
+        }
+      }
+    }
+  }
+}
