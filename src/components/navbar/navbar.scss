@@ -142,16 +142,14 @@
           font-family: Bornomala, sans-serif;
           font-size: 1rem;
           color: var(--light-25);
+          text-align: center;
 
           @include mixins.semiLargeDesktop {
-            height: 2.5rem;
             font-size: 1rem;
           }
 
           @include mixins.extraLargeTablet {
-            height: 2rem;
             font-size: 0.9rem;
-            padding: 0 0.8rem;
           }
         }
       }
